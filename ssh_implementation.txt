@@ -1,7 +1,16 @@
 npm init ---> initialize package.json
 git init  ---> initialize git
+
 npm install -g heroku ----> install heroku by cmd
 heroku login ---> login into heroku
+heroku keys:add --> to add public key in your heroku account
+heroku create [your_app_name] ---> to create app on heroku env
+git push heroku [master] ---> to push code in your heroku repo to build and deploy.
+heroku logs --tail ---> to check build error
+git remote ---> to see running environment
+process.env.PORT --> to put dynamic port
+
+[ https://nitesh-mean-app.herokuapp.com/ | https://git.heroku.com/nitesh-mean-app.git ] --- my application url
 
 ls  ~/.ssh ----> check for rsa ssh key
 
