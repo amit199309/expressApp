@@ -1,16 +1,33 @@
+
 npm init ---> initialize package.json
-git init  ---> initialize git
+
+------------------------------------------------------------------------------------------------
+// first commit on git 
+
+git init 
+git add .
+git commit -m "your message"
+git remote add origin https://github.com/[git-username]/[repo-name].git
+git remote add origin https://github.com/[amit199309]/[expressApp].git
+git push -u origin master
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+// heroku install and deployment 
 
 npm install -g heroku ----> install heroku by cmd
 heroku login ---> login into heroku
 heroku keys:add --> to add public key in your heroku account
 heroku create [your_app_name] ---> to create app on heroku env
+git remote ---> to see running heroku environment
 git push heroku [master] ---> to push code in your heroku repo to build and deploy.
 heroku logs --tail ---> to check build error
-git remote ---> to see running environment
-process.env.PORT --> to put dynamic port
-
+process.env.PORT --> to put dynamic port in app.js
+in package.json we need to put start script point to run express app 
 [ https://nitesh-mean-app.herokuapp.com/ | https://git.heroku.com/nitesh-mean-app.git ] --- my application url
+
+-----------------------------------------------------------------------------------------------------------------------------------
+// ssh implementation..
 
 ls  ~/.ssh ----> check for rsa ssh key
 
@@ -20,6 +37,8 @@ eval $(ssh-agent -s) ---> check for ssh agent
 
 ssh-add -k ~/.ssh/id_rsa ----> add private rsa key in system
 
-cat ~/.ssh/id_rsa.pub ---> get public key content to add in github ssh in setting
+cat ~/.ssh/id_rsa.pub ---> get public key content to add in github ssh in setting then add key in your github account
 
-ssh -T git@github.com ---> to check connection made securly between local and remote
+ssh -T git@github.com ---> to check connection made securly between local and remote 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
